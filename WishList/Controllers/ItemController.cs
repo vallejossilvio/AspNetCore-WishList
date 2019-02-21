@@ -13,8 +13,9 @@ namespace WishList.Controllers
 
         public ItemController(ApplicationDbContext context)
         {
-            context = _context;
+            _context = context;
         }
+
         public IActionResult Index()
         {
             var model = _context.Items.ToList();
